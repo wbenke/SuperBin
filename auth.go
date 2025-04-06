@@ -72,7 +72,7 @@ func AuthHandler(w http.ResponseWriter, r *http.Request) {
 			Value:    randomBytesString,
 			Expires:  time.Now().Add(24 * time.Hour),
 			HttpOnly: true,
-			Secure:   true,
+			Secure:   false,
 			Path:     "/",
 		})
 
