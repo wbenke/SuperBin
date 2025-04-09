@@ -15,7 +15,6 @@ import (
 	"fmt"
 	"log"
 	"mime"
-	_ "modernc.org/sqlite"
 	"net/http"
 	"os"
 	"os/signal"

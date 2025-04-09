@@ -13,12 +13,12 @@ package main
 import (
 	"database/sql"
 	"fmt"
-	_ "modernc.org/sqlite"
+	_ "github.com/mattn/go-sqlite3"
 )
 
 func InitDatabase() *sql.DB {
 
-	db, err := sql.Open("sqlite", "file:./data/database.db?cache=shared")
+	db, err := sql.Open("sqlite3", "file:./data/database.db?cache=shared")
 	if err != nil {
 		fmt.Println(err)
 		return nil
