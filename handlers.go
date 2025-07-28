@@ -127,7 +127,7 @@ func FileHandler(w http.ResponseWriter, r *http.Request, db *sql.DB) {
 				return
 			}
 
-			_, err = io.WriteString(w, r.Host+"/"+randUrl)
+			_, err = io.WriteString(w, Global.Domain+"/"+randUrl)
 			if err != nil {
 				fmt.Println(err)
 				return
@@ -148,7 +148,7 @@ func FileHandler(w http.ResponseWriter, r *http.Request, db *sql.DB) {
 				return
 			}
 
-			_, err = io.WriteString(w, r.Host+"/"+randUrl)
+			_, err = io.WriteString(w, Global.Domain+"/"+randUrl)
 			if err != nil {
 				fmt.Println(err)
 				return
@@ -247,7 +247,7 @@ func TextHandler(w http.ResponseWriter, r *http.Request, db *sql.DB) {
 
 	}
 
-	_, err = io.WriteString(w, r.Host+"/"+randUrl)
+	_, err = io.WriteString(w, Global.Domain+"/"+randUrl)
 	if err != nil {
 		fmt.Println(err)
 		return

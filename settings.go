@@ -25,6 +25,7 @@ type Setting struct {
 	CmdUploadDefaultDurationMinute int64  `json:"CmdUploadDefaultDurationMinute"`
 	EnablePassword                 bool   `json:"enablePassword"`
 	Password                       string `json:"password"`
+	Domain                         string `json:"domain"`
 }
 
 var Global Setting
